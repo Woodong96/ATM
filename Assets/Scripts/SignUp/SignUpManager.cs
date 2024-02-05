@@ -36,8 +36,18 @@ public class SignUpManager : MonoBehaviour
             Debug.LogWarning("비밀번호와 비밀번호 확인이 다름");
             return;
         }
+        if (IDInput.text.Length < 3 || IDInput.text.Length > 10)
+        {
+            Debug.LogWarning("아이디는 3글자~10글자사이");
+            return;
+        }
+        if (UserName.text.Length < 2 || UserName.text.Length > 5)
+        {
+            Debug.LogWarning("유저이름은 2글자~5글자 사이");
+            return;
+        }
 
-        
+
         PlayerPrefs.SetString(Idtxt, Pstxt);
         PlayerPrefs.Save();
         Signup_Page.SetActive(false);

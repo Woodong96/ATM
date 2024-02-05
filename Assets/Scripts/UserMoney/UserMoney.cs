@@ -31,8 +31,8 @@ public class UserMoney : MonoBehaviour
 
     private void Update()
     {
-        Balance.text = money.First_Balance.ToString("N0");
-        Cash.text = money.First_Cash.ToString("N0");
+        Balance.text = money.First_Balance.ToString("C");
+        Cash.text = money.First_Cash.ToString("C");
     }
     public void Deposit_Money(int input)
     {

@@ -1,27 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+public struct Money
+{
+    public int First_Balance {  get; set; }
+    public int First_Cash { get; set; }
+}
 
 public class UserMoney : MonoBehaviour
 {
     public static UserMoney instance;
     public Text Balance;
     public Text Cash;
-
-    public int First_Balance;
-    public int First_Cash;
+    public Money money;
+    
+    
+  
     private void Awake()
     {
         instance = this;
+
+        money = new Money();
+        money.First_Balance = 50000;
+        money.First_Cash = 100000;
     }
 
     private void Update()
     {
-        Balance.text = First_Balance.ToString("N0");
-        Cash.text = First_Cash.ToString("N0");
+        Balance.text = money.First_Balance.ToString("N0");
+        Cash.text = money.First_Cash.ToString("N0");
     }
+    public void Deposit_Money(int input)
+    {
+        if (money.First_Cash >= input)
+        {
+            money.First_Cash -= input;
+            money.First_Balance += input;
+        }
+        
 
+
+    }
 }

@@ -20,4 +20,14 @@ public class PutOut : MonoBehaviour
         Deposit.SetActive(false);
         Withdraw.SetActive(false);
     }
+
+
+    public void Back()
+    {
+        Deposit.SetActive(true);
+        Withdraw.SetActive(true);
+        DepositSetting.SetActive(false);
+    }
+
+
 }

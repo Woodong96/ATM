@@ -17,7 +17,7 @@ public class UserMoney : MonoBehaviour
     public Text Balance;
     public Text Cash;
     public Money money;
-    
+    public GameObject PutOut;
     
   
     private void Awake()
@@ -41,7 +41,24 @@ public class UserMoney : MonoBehaviour
             money.First_Cash -= input;
             money.First_Balance += input;
         }
-        
+        else
+        {
+            PutOut.GetComponent<PutOut>().CheckMoneyOn();
+        }
+
+
+    } 
+    public void Withdraw_Money(int input)
+    {
+        if (money.First_Balance >= input)
+        {
+            money.First_Cash += input;
+            money.First_Balance -= input;
+        }
+        else
+        {
+            PutOut.GetComponent<PutOut>().CheckMoneyOn();
+        }
 
 
     }

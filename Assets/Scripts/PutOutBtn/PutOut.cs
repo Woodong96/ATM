@@ -7,6 +7,8 @@ public class PutOut : MonoBehaviour
     public GameObject Deposit;
     public GameObject Withdraw;
     public GameObject DepositSetting;
+    public GameObject CheckMoney;
+    public GameObject WithdrawSetting;
     // Start is called before the first frame update
     public void DepositBtnClick()
     {
@@ -19,6 +21,7 @@ public class PutOut : MonoBehaviour
     {
         Deposit.SetActive(false);
         Withdraw.SetActive(false);
+        WithdrawSetting.SetActive(true);
     }
 
 
@@ -27,7 +30,19 @@ public class PutOut : MonoBehaviour
         Deposit.SetActive(true);
         Withdraw.SetActive(true);
         DepositSetting.SetActive(false);
+        WithdrawSetting.SetActive(false);
     }
+
+    public void CheckMoneyOn()
+    {
+        CheckMoney.SetActive(true);
+    } 
+    
+    public void CheckMoneyOff()
+    {
+        CheckMoney.SetActive(false);
+    }
+
 
 
 }

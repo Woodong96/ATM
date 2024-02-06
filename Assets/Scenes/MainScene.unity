@@ -1791,7 +1791,7 @@ MonoBehaviour:
   Withdraw: {fileID: 1617737081}
   Remittance: {fileID: 479245668}
   DepositSetting: {fileID: 366722821}
-  CheckMoney: {fileID: 0}
+  CheckMoney: {fileID: 565525120}
   WithdrawSetting: {fileID: 224847402}
   RemittanceSetting: {fileID: 1162856187}
 --- !u!1 &479245668
@@ -6072,7 +6072,7 @@ MonoBehaviour:
   Withdraw: {fileID: 1617737081}
   Remittance: {fileID: 479245668}
   DepositSetting: {fileID: 366722821}
-  CheckMoney: {fileID: 0}
+  CheckMoney: {fileID: 565525120}
   WithdrawSetting: {fileID: 224847402}
   RemittanceSetting: {fileID: 1162856187}
 --- !u!114 &1652838736
@@ -6226,7 +6226,7 @@ MonoBehaviour:
   Withdraw: {fileID: 1617737081}
   Remittance: {fileID: 479245668}
   DepositSetting: {fileID: 366722821}
-  CheckMoney: {fileID: 0}
+  CheckMoney: {fileID: 565525120}
   WithdrawSetting: {fileID: 224847402}
   RemittanceSetting: {fileID: 1162856187}
 --- !u!114 &1655331668
@@ -6700,11 +6700,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Deposit: {fileID: 486968758}
   Withdraw: {fileID: 1617737081}
-  Remittance: {fileID: 0}
+  Remittance: {fileID: 479245668}
   DepositSetting: {fileID: 366722821}
   CheckMoney: {fileID: 565525120}
   WithdrawSetting: {fileID: 224847402}
-  RemittanceSetting: {fileID: 0}
+  RemittanceSetting: {fileID: 1162856187}
 --- !u!1 &1792805266
 GameObject:
   m_ObjectHideFlags: 0

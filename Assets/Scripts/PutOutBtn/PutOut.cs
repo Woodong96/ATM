@@ -12,6 +12,12 @@ public class PutOut : MonoBehaviour
     public GameObject WithdrawSetting;
     public GameObject RemittanceSetting;
     // Start is called before the first frame update
+
+
+    void Start()
+    {
+        GameObject.Find("DontDestroyOnLoad").GetComponent<MoneyManager>().PutOut = this.gameObject;  // 선언할시 오브젝트가 많을시 다 찾아서 그중에 고른다. << 가급적 쓰지 않는것이 좋다.(버그 등)
+    }
     public void DepositBtnClick()
     {
         Deposit.SetActive(false);

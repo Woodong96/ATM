@@ -23,8 +23,10 @@ public class MoneyManager : MonoBehaviour   // ¸ð³ëºñÇìÀÌºñ¾î ¶§°í ÀÛµ¿ È®ÀÎ(UI¸
     public Money money;
     public GameObject PutOut;
     public Text User_Name;
-    
-    
+
+    // ÇÇµå¹é
+    // start¾À¿¡¼­´Â À¯ÀúÈ®ÀÎ¸¸
+    // ¸ÞÀÎ¾À¿¡¼­´Â À¯Àú ±â¹ÝÀ¸·Î µ¥ÀÌÅÍ°ü¸®¸¸
 
 
     private void Awake()
@@ -52,6 +54,7 @@ public class MoneyManager : MonoBehaviour   // ¸ð³ëºñÇìÀÌºñ¾î ¶§°í ÀÛµ¿ È®ÀÎ(UI¸
     }
     public void Deposit_Money(int input)
     {
+        Debug.Log(input);
         if (money.First_Cash >= input)
         {
             money.First_Cash -= input;
@@ -59,6 +62,7 @@ public class MoneyManager : MonoBehaviour   // ¸ð³ëºñÇìÀÌºñ¾î ¶§°í ÀÛµ¿ È®ÀÎ(UI¸
         }
         else
         {
+            Debug.Log("123");
             PutOut.GetComponent<PutOut>().CheckMoneyOn();
         }
 

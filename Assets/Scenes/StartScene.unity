@@ -2534,8 +2534,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c20ed41ac1577f14a871a199c3372c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Balance: {fileID: 0}
-  Cash: {fileID: 0}
   PutOut: {fileID: 0}
   User_Name: {fileID: 0}
 --- !u!4 &1129758326

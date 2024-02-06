@@ -8,16 +8,15 @@ public class Scenemanager : MonoBehaviour
 {
     public InputField inputID;
     public InputField inputPS;
-
-    
-
     public void StartMainScence()
     {
         string Idtxt = inputID.text;
         string Pstxt = inputPS.text;
-        string checkPs = PlayerPrefs.GetString("Idtxt");
+        string checkPs = PlayerPrefs.GetString(Idtxt);
         if (Pstxt == checkPs)
         {
+
+            MoneyManager.instance.SetData(Idtxt);
             SceneManager.LoadScene("MainScene");
         }
         else
@@ -26,4 +25,12 @@ public class Scenemanager : MonoBehaviour
         }
 
     }
+
+    public void BackToStartScence()
+    {
+        
+        MoneyManager.instance.SaveData();
+        SceneManager.LoadScene("StartScene");
+    }
+
 }

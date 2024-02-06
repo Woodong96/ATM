@@ -996,30 +996,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 360442736}
-  - component: {fileID: 360442735}
   - component: {fileID: 360442737}
   - component: {fileID: 360442738}
   m_Layer: 0
-  m_Name: MoneyManager
+  m_Name: MoneyUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &360442735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360442734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c20ed41ac1577f14a871a199c3372c48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PutOut: {fileID: 360442734}
-  User_Name: {fileID: 1883229781}
 --- !u!4 &360442736
 Transform:
   m_ObjectHideFlags: 0
@@ -1051,7 +1036,7 @@ MonoBehaviour:
   Withdraw: {fileID: 1617737081}
   DepositSetting: {fileID: 366722821}
   CheckMoney: {fileID: 565525120}
-  WithdrawSetting: {fileID: 0}
+  WithdrawSetting: {fileID: 224847402}
 --- !u!114 &360442738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1064,8 +1049,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4da686ecd5879c844806aae1594920f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PutOut: {fileID: 360442734}
-  User_Name: {fileID: 1883229781}
   Balance: {fileID: 501166085}
   Cash: {fileID: 1712179536}
   Name: {fileID: 1883229781}
@@ -5324,6 +5307,8 @@ GameObject:
   - component: {fileID: 1942514702}
   - component: {fileID: 1942514704}
   - component: {fileID: 1942514703}
+  - component: {fileID: 1942514706}
+  - component: {fileID: 1942514705}
   m_Layer: 0
   m_Name: BackToLogin
   m_TagString: Untagged
@@ -5390,6 +5375,76 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942514701}
   m_CullTransparentMesh: 1
+--- !u!114 &1942514705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942514701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29519067e33d02d4d94b110f8f421757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputID: {fileID: 0}
+  inputPS: {fileID: 0}
+--- !u!114 &1942514706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942514701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1942514703}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1942514705}
+        m_TargetAssemblyTypeName: Scenemanager, Assembly-CSharp
+        m_MethodName: BackToStartScence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1996550924
 GameObject:
   m_ObjectHideFlags: 0

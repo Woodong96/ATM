@@ -9,6 +9,7 @@ public class PutOut : MonoBehaviour
     public GameObject Remittance;
     public GameObject DepositSetting;
     public GameObject CheckMoney;
+    public GameObject CheckID;
     public GameObject WithdrawSetting;
     public GameObject RemittanceSetting;
     // Start is called before the first frame update
@@ -63,6 +64,13 @@ public class PutOut : MonoBehaviour
         CheckMoney.SetActive(false);
     }
 
-
+    public void CheckIdOn()
+    {
+        CheckID.SetActive(true);
+    }
+    public void CheckIdOff()
+    {
+        CheckID.SetActive(false);
+    }
 
 }

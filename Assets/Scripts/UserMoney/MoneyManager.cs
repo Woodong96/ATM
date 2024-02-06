@@ -103,6 +103,7 @@ public class MoneyManager : MonoBehaviour   // 모노비헤이비어 때고 작동 확인(UI�
         else
         {
             Debug.LogWarning("받는이의 ID를 확인하세요.");
+            PutOut.GetComponent<PutOut>().CheckIdOn();
             return;
         }
     }

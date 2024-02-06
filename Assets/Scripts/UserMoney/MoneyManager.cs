@@ -79,7 +79,7 @@ public class MoneyManager : MonoBehaviour   // 모노비헤이비어 때고 작동 확인(UI�
 
     public void Remittance_Money(string input ,int input2)
     {
-        if (PlayerPrefs.HasKey(input))
+        if (PlayerPrefs.HasKey(input) && input != money.User_Id)
         {
             if (money.First_Balance >= input2)
             {
@@ -92,11 +92,13 @@ public class MoneyManager : MonoBehaviour   // 모노비헤이비어 때고 작동 확인(UI�
             }
             else
             {
+                Debug.LogWarning("잔액을 확인하세요.");
                 PutOut.GetComponent<PutOut>().CheckMoneyOn();
             }
         }
         else
         {
+            Debug.LogWarning("받는이의 ID를 확인하세요.");
             return;
         }
     }

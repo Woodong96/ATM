@@ -15,6 +15,7 @@ public class SignUpManager : MonoBehaviour
     {
         string Idtxt = IDInput.text;  
         string Pstxt = PSInput.text;    
+        string User_Name = UserName.text;
         string PsConfirmtxt = PsConfirmInput.text;
         string Nametxt = UserName.text;
 
@@ -54,6 +55,9 @@ public class SignUpManager : MonoBehaviour
 
 
         PlayerPrefs.SetString("Idtxt", Pstxt);
+        PlayerPrefs.SetInt("Idtxt_Balance", 50000);
+        PlayerPrefs.SetInt("Idtxt_Cash", 100000);
+        PlayerPrefs.SetString("Idtxt_Name", User_Name);
         PlayerPrefs.Save();
         Signup_Page.SetActive(false);
 

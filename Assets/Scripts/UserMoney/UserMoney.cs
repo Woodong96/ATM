@@ -9,15 +9,17 @@ public struct Money
 {
     public int First_Balance {  get; set; }
     public int First_Cash { get; set; }
+
+    public string User_Name { get; set; }
 }
 
 public class UserMoney : MonoBehaviour
 {
     public static UserMoney instance;
-    public Text Balance;
-    public Text Cash;
+
     public Money money;
     public GameObject PutOut;
+    public Text User_Name;
     
   
     private void Awake()
@@ -25,15 +27,13 @@ public class UserMoney : MonoBehaviour
         instance = this;
 
         money = new Money();
-        money.First_Balance = 50000;
-        money.First_Cash = 100000;
+        money.First_Balance = PlayerPrefs.GetInt("Idtxt_Balance");
+        money.First_Cash = PlayerPrefs.GetInt("Idtxt_Cash");
+        money.User_Name = PlayerPrefs.GetString("Idtxt_Name");
+        DontDestroyOnLoad(UserMoney.instance);
     }
 
-    private void Update()
-    {
-        Balance.text = money.First_Balance.ToString("C");
-        Cash.text = money.First_Cash.ToString("C");
-    }
+    
     public void Deposit_Money(int input)
     {
         if (money.First_Cash >= input)

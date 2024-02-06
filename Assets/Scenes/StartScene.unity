@@ -2100,7 +2100,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uCD08  \uAE30  \uD654"
 --- !u!222 &933436462
 CanvasRenderer:
   m_ObjectHideFlags: 0

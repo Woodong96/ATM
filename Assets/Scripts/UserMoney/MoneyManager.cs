@@ -77,6 +77,30 @@ public class MoneyManager : MonoBehaviour   // 모노비헤이비어 때고 작동 확인(UI�
         }
     }
 
+    public void Remittance_Money(string input ,int input2)
+    {
+        if (PlayerPrefs.HasKey(input))
+        {
+            if (money.First_Balance >= input2)
+            {
+                
+                money.First_Balance -= input2;
+                int Get_Num = PlayerPrefs.GetInt(input + "Balance") + input2;
+                PlayerPrefs.SetInt(input + "Balance", Get_Num);
+                PlayerPrefs.Save();
+
+            }
+            else
+            {
+                PutOut.GetComponent<PutOut>().CheckMoneyOn();
+            }
+        }
+        else
+        {
+            return;
+        }
+    }
+
     public void SetData(string Idtxt)
     {
         money = new Money();

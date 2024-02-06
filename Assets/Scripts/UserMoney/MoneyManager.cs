@@ -54,7 +54,7 @@ public class MoneyManager : MonoBehaviour   // 모노비헤이비어 때고 작동 확인(UI�
     }
     public void Deposit_Money(int input)
     {
-        Debug.Log(input);
+       
         if (money.First_Cash >= input)
         {
             money.First_Cash -= input;
@@ -62,7 +62,7 @@ public class MoneyManager : MonoBehaviour   // 모노비헤이비어 때고 작동 확인(UI�
         }
         else
         {
-            Debug.Log("123");
+            
             PutOut.GetComponent<PutOut>().CheckMoneyOn();
         }
 
